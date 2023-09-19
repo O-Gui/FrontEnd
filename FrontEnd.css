@@ -1,14 +1,17 @@
 body{
-background-color: blanchedalmond;
+
+    background-color: #F1EFEF;
 }
 
+
 h1{
-    color: darkgreen;
-    font-size: 50px;
-    font-family: cursive;
+color: #79AC78;
+font-size: 50px;
+font-family: cursive;
 }
 
 p{
- font-family: cursive;
+  color: rgb(97, 125, 252);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
