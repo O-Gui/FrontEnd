@@ -68,3 +68,35 @@ width: 100vh;
 
 
 https://getbootstrap.com/docs/5.1/components/navbar/
+
+// Função para verificar se o quarto está ocupado
+int verificarQuartoOcupado(int quartoDesejado, int quartosOcupados[10]) {
+    for (int i = 0; i < 10; ++i) {
+        if (quartosOcupados[i] == quartoDesejado) {
+            return 1; // O quarto está ocupado
+        }
+    }
+    return 0; // O quarto não está ocupado
+}
+
+// Função para verificar se o quarto é válido
+int verificarQuartoValido(int quartoDesejado, int quartosVazios[10]) {
+    for (int i = 0; i < 10; ++i) {
+        if (quartosVazios[i] == quartoDesejado) {
+            return 1; // O quarto é válido
+        }
+    }
+    return 0; // O quarto não é válido
+}
+
+// Função para remover um hóspede de um quarto ocupado
+void removerHospede(int quartoDesejado, int quartosOcupados[10], int quartosVazios[10]) {
+    for (int i = 0; i < 10; ++i) {
+        if (quartosOcupados[i] == quartoDesejado) {
+            // Libera o quarto
+            quartosVazios[i] = quartoDesejado;
+            quartosOcupados[i] = 0; // Marca como quarto vago
+            printf("Hospede removido do quarto %d.\n", quartoDesejado);
+            return;
+        }
+    }
